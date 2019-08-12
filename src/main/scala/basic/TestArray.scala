@@ -9,6 +9,18 @@ object TestArray {
     //    testArrayBuffer
 //    testTraverse
     testOperation
+
+    testYield
+  }
+
+  private def testYield = {
+    // 对Array进行转换，获取的还是Array
+    val a = Array(1, 2, 3, 4, 5)
+    val a2 = for (ele <- a) yield ele * ele
+    // 对ArrayBuffer进行转换，获取的还是ArrayBuffer
+    val b = ArrayBuffer[Int]()
+    b += (1, 2, 3, 4, 5)
+    val b2 = for (ele <- b) yield ele * ele
   }
 
   private def testOperation = {
