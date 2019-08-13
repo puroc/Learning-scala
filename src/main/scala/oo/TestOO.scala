@@ -20,7 +20,7 @@ object TestOO {
 //
 //    new Student4("lily")
 
-    Person("lucy",25).sayHello
+    Teacher("lucy",25).sayHello
 
 
   }
